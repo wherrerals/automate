@@ -19,7 +19,11 @@ continue_button.click()
 password_field = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.NAME, "password")))
 password_field.send_keys("Ea7hava5*")
 
-# Localizar y hacer clic en el botón "Siguiente" o cualquier otro botón relevante para continuar
+# Cerrar el navegador
+driver.quit()
+
+
+""" # Localizar y hacer clic en el botón "Siguiente" o cualquier otro botón relevante para continuar
 continue_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[data-testid='request-password-continue']")))
 continue_button.click()
 
@@ -27,10 +31,6 @@ continue_button.click()
 login_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Iniciar sesión')]")))
 login_button.click()
 
-# Esperar a que el inicio de sesión se complete (puedes agregar más lógica aquí según la respuesta esperada)
-# Aquí podrías esperar a que aparezca un elemento específico en la página de inicio después del inicio de sesión
-# por ejemplo, puedes esperar a que aparezca el nombre de usuario en el panel de control.
-# WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "username")))
+# Esperar a que el inicio de sesión se complete
+# Aquí podría esperar a que aparezca un elemento específico en la página de inicio después del inicio de sesión """
 
-# Cerrar el navegador
-driver.quit()
